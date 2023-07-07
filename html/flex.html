@@ -1,0 +1,49 @@
+<!-- 面试题
+flex: 1是哪些属性的缩写，对应的属性代表的是什么含义
+flex: 1是 flex-grow: 1, flex-shrink: 1, flex-basis: 0% 的缩写。
+flex-grow: 当为0时，有剩余空间也不扩大，当为1时，有剩余空间则扩大（默认为0）。
+flex-shrink: 当为0时，空间不足时不缩小，当为1时，空间不足则缩小（默认为1）。
+flex-basis: 浏览器根据这个属性，计算主轴是否有多余空。auto 以width为准，若没有width，则以content为准 | 0% | px固定空间
+
+flex: initial; flex: 0 1 auto;
+flex: none;    flex: 0 0 auto;
+flex: 1;       flex: 1 1 0%;
+flex: auto     flex: 1 1 auto;
+
+阮一峰详细讲解flex教程
+https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html
+
+flex-basis教程
+https://www.zhangxinxu.com/wordpress/2019/12/css-flex-basis/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      display: flex;
+      width: 100%;
+      height: 200px;
+    }
+    .son-1 {
+      flex: 1;
+      background: pink;
+    }
+    .son-2 {
+      flex: 1;
+      background: grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="father">
+    <div class="son-1"></div>
+    <div class="son-2"></div>
+  </div>
+</body>
+</html>
